@@ -1,0 +1,40 @@
+{
+    "pages": [
+        "pages/index/index",        
+        "pages/plaza/index",
+        "pages/plaza/china",
+        "pages/plaza/japan",
+        "pages/plaza/adobe",
+        "pages/plaza/myfav",
+        "pages/plaza/detail",
+        "pages/plaza/edit",
+        "pages/plaza/fav",
+
+        "pages/transition/transition",
+                
+        "pages/tools/tools",
+        "pages/tools/lucky/lucky",
+        "pages/tools/analogous/analogous",
+        "pages/tools/triad/triad",
+        "pages/tools/monochromatic/monochromatic",
+        "pages/tools/complementary/complementary",
+        "pages/tools/shade/shade",
+        "pages/tools/secondary/secondary",
+        
+        "pages/web/web",
+        "pages/web/colordetail",
+        "pages/web/webcolor/webcolor",
+        "pages/web/graylevel/graylevel",
+        "pages/web/csscolor/csscolor",
+        
+        "pages/about/about"        
+    ],
+    "window": {
+        "backgroundColor": "#FFFFFF",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#FFFFFF",
+        "navigationBarTitleText": "Color颜值",
+        "navigationBarTextStyle": "black",
+        "enablePullDownRefresh": false
+    }
+}
