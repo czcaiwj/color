@@ -1,0 +1,7 @@
+{
+    "navigationBarBackgroundColor": "#242424",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "配色详情",
+    "enablePullDownRefresh": false,
+    "disableScroll": true
+}

@@ -1,0 +1,128 @@
+.layer
+{
+    background-color: #f7f7f7;
+}
+
+.box
+{    
+    padding: 10px;
+    box-shadow: 10px 10px 5px rgba(39, 48, 57, 0.05);
+    background-color: white;
+}
+
+.item
+{
+    display: flex;
+    align-items: center;
+    color: #888;
+}
+
+.item p
+{
+    color: #888;
+    font-size: small;    
+}
+
+.preview
+{
+    margin: 20px 0px;    
+    box-shadow: 10px 10px 5px rgba(39, 48, 57, 0.05);
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: white;
+}
+
+.color
+{
+    height: 50px;
+}
+
+.preview p
+{
+    margin: 5px;
+    font-size: small;
+    color: #888;
+}
+
+.test
+{
+    background-color: white;
+    box-shadow: 10px 10px 5px rgba(39, 48, 57, 0.05);
+}
+
+.fixed
+{    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cell
+{
+    font-size: small;
+    
+}
+
+.cell-color
+{
+    height: 60px;
+}
+
+.cell-footer
+{
+    background-color: white;
+    text-align: center;
+    padding-top:5px;
+    padding-bottom:5px;
+    color: #888;
+}
+
+radio
+{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;    
+}
+
+.wx-radio-input
+{
+    width:12px!important;
+    height: 12px!important;
+}
+
+.adjust
+{
+    margin: 20px 0;
+    background-color: white;
+    padding-bottom:10px;
+}
+
+.board
+{
+    display: flex;
+    align-items: center;
+}
+
+.board p
+{
+    color: #888;
+    font-size: small;
+    padding:10px;
+}
+
+.btn-fav
+{
+    color:#fff;
+    background-color:#e864b3;
+    border-color:#5e96d1;
+    border-radius: 20px;
+}
+
+.btn-random
+{
+    color:#fff;
+    background-color:#5e96d1;
+    border-color:#5e96d1;
+    border-radius: 20px;
+}

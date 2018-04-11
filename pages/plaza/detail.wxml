@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="layer"></div>
+    <p class="title">{{name}}</p>
+    <block wx:for="{{colors}}" wx:for-item="item" wx:key="">
+        <div class="cell">
+            <div class="color-block" style="background-color:{{item.hex}}" bindtap="detail" data-color="{{item.hex}}"></div>
+            <div class="value">
+                <p>R: {{item.rgb[0]}}</p>
+                <p>H: {{item.hsb[0]}}</p>
+            </div>
+            <div class="value">
+                <p>G: {{item.rgb[1]}}</p>
+                <p>S: {{item.hsb[1]}}%</p>
+            </div>
+            <div class="value">
+                <p>B: {{item.rgb[2]}}</p>
+                <p>B: {{item.hsb[2]}}%</p>
+            </div>
+        </div>
+    </block>
+    <block wx:if="{{source == 'other'}}">
+        <p class="fav" bindtap="fav">收藏</p>
+    </block>
+    <block wx:if="{{source == 'my'}}">
+        <p class="delete" bindtap="delete">删除</p>
+        <p class="edit" bindtap="edit">编辑</p>
+    </block>
+</div>

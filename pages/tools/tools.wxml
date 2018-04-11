@@ -1,0 +1,11 @@
+<!--pages/tools/tools.wxml-->
+<div class="container-fluid">
+    <div class="box" style="height: {{height}}px;">
+        <block wx:for="{{array}}" wx:for-item="item" wx:key="">
+            <div class="cell" style="background-color: {{item.color}}" bindtap="click" data-name="{{item.url}}">
+                <p class="flex-grow-1">{{item.name}}</p>
+                <p class="iconfont icon-enter"></p>
+            </div>
+        </block>
+    </div>    
+</div>

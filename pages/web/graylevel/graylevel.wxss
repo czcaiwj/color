@@ -1,0 +1,16 @@
+/* pages/web/graylevel/graylevel.wxss */
+.box
+{
+    display: flex;
+    align-items: center;
+}
+
+.box p
+{
+    min-width: 80px;
+}
+
+.cell
+{
+    flex-grow: 1;
+}

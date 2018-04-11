@@ -1,0 +1,11 @@
+<!--pages/graylevel/graylevel.wxml-->
+<div class="container">
+    <block wx:for="{{color}}" wx:key="">
+        <div class="box" bindtap="click" data-color="{{item.hex}}">
+            <p>{{item.hex}}</p>
+            <div class="cell" style="background-color: {{item.hex}}; height: 40px;">
+            </div>            
+        </div>
+    </block>
+    <div class="addfooter"></div>
+</div>

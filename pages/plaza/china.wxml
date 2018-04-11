@@ -1,0 +1,10 @@
+<div class="container-fluid">
+    <div class="layer"></div>
+    <block wx:for="{{colors}}" wx:for-item="item" wx:key="">
+        <div class="cell" style="background-color: {{item.hex}};" bindtap="jump" data-name="{{item.name}}" data-color="{{item.hex}}">
+            <p style="color: {{item.color}}">{{item.name}}</p>
+            <p style="color: {{item.color}}">{{item.hex}}</p>
+        </div>
+    </block>
+    <div class="addfooter"></div>
+</div>

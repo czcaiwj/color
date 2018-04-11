@@ -1,0 +1,83 @@
+<!--pages/common/colordetail.wxml-->
+<div class="container">
+    <div class="preview">
+        <div class="color" style="background-color:{{hex}}; height:110px;"></div>
+        <p class="text-muted text-center" style="margin-top:10px;"><small>{{hex}}</small></p>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="value">
+                <p class="text-muted text-center">RGB分量</p>
+                <div class="row">
+                    <div class="col-12 text-center"><p>R:</p></div>
+                    <div class="col-8 text-right">{{red}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center"><p>G:</p></div>
+                    <div class="col-8 text-right">{{green}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center"><p>B:</p></div>
+                    <div class="col-8 text-right">{{blue}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="value">
+                <p class="text-muted text-center">CMYK分量</p>
+                <div class="row">
+                    <div class="col-12 text-center"><p>C:</p></div>
+                    <div class="col-8 text-right">{{cyan}}%</div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center"><p>M:</p></div>
+                    <div class="col-8 text-right">{{magenta}}%</div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center"><p>Y:</p></div>
+                    <div class="col-8 text-right">{{yellow}}%</div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center"><p>K:</p></div>
+                    <div class="col-8 text-right">{{black}}%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="value">
+                <p class="text-muted text-center">Lab分量</p>
+                <div class="row">
+                    <div class="col-12 text-center"><p>L:</p></div>
+                    <div class="col-8 text-right">{{luminosity}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center"><p>a:</p></div>
+                    <div class="col-8 text-right">{{a}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center"><p>b:</p></div>
+                    <div class="col-8 text-right">{{b}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="value">
+                <p class="text-muted text-center">HSB分量</p>
+                <div class="row">
+                    <div class="col-12 text-center"><p>H:</p></div>
+                    <div class="col-8 text-right">{{hue}}%</div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center"><p>S:</p></div>
+                    <div class="col-8 text-right">{{saturation}}%</div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center"><p>B:</p></div>
+                    <div class="col-8 text-right">{{brightness}}%</div>
+                </div>                
+            </div>
+        </div>
+    </div>
+</div>

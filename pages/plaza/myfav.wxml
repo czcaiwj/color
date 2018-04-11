@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="layer"></div>
+    <block wx:for="{{colors}}" wx:for-item="item" wx:key="" wx:for-index="index">
+        <div class="cell" bindtap="detail" data-index="{{index}}">
+            <div style="height: {{width / 1.2}}px; width: {{width}}px; background-color: {{item.color1}}"></div>
+            <div style="height: {{width / 1.2}}px; width: {{width}}px; background-color: {{item.color2}}"></div>
+            <div style="height: {{width / 1.2}}px; width: {{width}}px; background-color: {{item.color3}}"></div>
+            <div style="height: {{width / 1.2}}px; width: {{width}}px; background-color: {{item.color4}}"></div>
+            <div style="height: {{width / 1.2}}px; width: {{width}}px; background-color: {{item.color5}}"></div>
+        </div>
+        <p class="text-muted"><small>{{item.name}}</small></p>
+    </block>
+    <div class="addfooter"></div>
+</div>

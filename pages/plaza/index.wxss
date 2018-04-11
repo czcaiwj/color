@@ -1,0 +1,33 @@
+/* pages/plaza/index.wxss */
+.box
+{
+    display: flex;
+    flex-direction: column;    
+    color: white;
+}
+
+.cell
+{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;        
+    font-size: 1.2rem;    
+    justify-content:center;
+}
+
+.china
+{    
+    background-color: #ff461f;
+}
+
+.japan {
+    background-color: #88ada6;
+}
+
+.adobe {
+    background-color: #003371;
+}
+
+.fav {
+    background-color: #ef7a82;
+}

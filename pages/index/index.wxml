@@ -1,0 +1,20 @@
+<div class="container-fluid text-center">
+    <div class="layer"></div>
+    <p class="mainTitle animated fadeInDown">Color</p>
+    <p class="subTitle animated fadeInDown">颜值</p>
+    <div class="row">
+        <div class="col-14 col-offset-5">
+            <p class="btn-item animated fadeInUp" bindtap="click" data-name="plaza">配色广场</p>
+            <p class="btn-item animated fadeInUp" bindtap="click" data-name="transition">颜色转换</p>
+            <p class="btn-item animated fadeInUp" bindtap="click" data-name="tools">色彩工具</p>
+            <p class="btn-item animated fadeInUp" bindtap="click" data-name="web">Web颜色</p>
+            <p class="btn-item animated fadeInUp" bindtap="click" data-name="about">关于颜值</p>
+        </div>
+    </div>
+    <!--<button class="btn-timeline">
+        <p class="iconfont icon-pengyouquan" open-type="contact"></p>
+    </button>-->
+    <button class="btn-share" open-type="share">
+        <p class="iconfont icon-web-icon-"></p>
+    </button>
+</div>

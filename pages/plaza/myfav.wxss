@@ -1,0 +1,22 @@
+/* pages/plaza/myfav.wxss */
+
+.layer {
+    background-color: #242424;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.random {
+    padding: 10px;
+    background-color: #5b7e91;
+    color: white;
+    text-align: center;
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+}

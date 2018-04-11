@@ -1,0 +1,71 @@
+/* transition.wxss */
+
+.mode
+{
+    margin: 20px;
+    padding: 10px;
+    box-shadow: 10px 10px 5px rgba(39, 48, 57, 0.05);
+}
+
+.header
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+}
+
+.picker
+{
+    margin-left: 20px;
+}
+
+.item
+{
+    display: flex;
+    align-items: center;
+    color: #888;
+}
+
+.item p
+{
+    color: #888;
+    font-size: small;    
+}
+
+.preview
+{
+    margin: 20px;    
+    box-shadow: 10px 10px 5px rgba(39, 48, 57, 0.05);
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.color
+{
+    height: 50px;
+}
+
+.preview p
+{
+    margin: 5px;
+    font-size: small;
+}
+
+.box
+{
+    margin: 20px;  
+    box-shadow: 10px 10px 5px rgba(39, 48, 57, 0.05);
+}
+
+.value
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.value p
+{
+    margin-bottom: 10px;
+    font-size: small;
+}

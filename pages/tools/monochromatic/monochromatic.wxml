@@ -1,0 +1,62 @@
+<div class="container-fluid">
+    <div class="layer"></div>
+    <div class="box">
+        <div class="item">
+            <p>R:</p>
+            <slider id="red" min="0" max="255" value="{{red}}" show-value selected-color="#F00" bindchange="rgbChange" />
+        </div>
+        <div class="item">
+            <p>G:</p>
+            <slider id="green" min="0" max="255" value="{{green}}" show-value selected-color="#0F0" bindchange="rgbChange" />
+        </div>
+        <div class="item">
+            <p>B:</p>
+            <slider id="blue" min="0" max="255" value="{{blue}}" show-value selected-color="#00F" bindchange="rgbChange" />
+        </div>
+    </div>
+    <div class="preview">
+        <p>基准色</p>
+        <div class="color" style="background-color:{{hex}}"></div>
+        <p>{{hex}}</p>
+    </div>
+    <div class="test">
+        <p class="text-muted text-center" style="padding: 5px;">
+            <small>单色组</small>
+        </p>
+        <radio-group bindchange="radioChange" class="fixed">
+            <block wx:for="{{render_color}}" wx:for-item="item" wx:key="" wx:for-index="i">
+                <div class="cell">
+                    <div class="cell-color" style="background-color:{{item.hex}};"></div>
+                    <div class="cell-footer" wx:if="{{i == 0}}">
+                        <radio checked="{{true}}" value="{{i}}" color="{{item.hex}}" />{{item.hex}}                        
+                    </div>
+                    <div class="cell-footer" wx:else>
+                        <radio value="{{i}}" color="{{item.hex}}" />{{item.hex}}
+                    </div>
+                </div>
+            </block>
+        </radio-group>
+    </div>
+    <div class="adjust">
+        <p class="text-muted text-center" style="padding: 5px;">
+            <small>调整单色</small>
+        </p>
+        <div class="board">
+            <p class="col-4">饱和度</p>
+            <slider class="col-20" id="saturation" min="0" max="100" value="{{saturation}}" show-value selected-color="#59b057" bindchange="saturationChange" />
+        </div>
+        <div class="board">
+            <p class="col-4">亮度</p>
+            <slider class="col-20" id="brightness" min="0" max="100" value="{{brightness}}" show-value selected-color="{{hex}}" bindchange="brightnessChange" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-9 col-offset-2">
+            <button class="btn btn-block btn-fav" bindtap="fav">收藏</button>
+        </div>
+        <div class="col-9 col-offset-2">
+            <button class="btn btn-block btn-random" bindtap="random_value_change">随机</button>
+        </div>
+    </div>
+    <div class="addfooter"></div>
+</div>

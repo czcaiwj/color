@@ -1,0 +1,7 @@
+<div class="container-fluid">
+    <div class="box" style="height: {{height}}px;">
+        <div class="cell css" bindtap="click" data-name="css"><p>CSS 颜色值</p></div>
+        <div class="cell web" bindtap="click" data-name="web"><p>Web 安全色</p></div>
+        <div class="cell gray" bindtap="click" data-name="gray"><p>Gray 灰度值</p></div>
+    </div>
+</div>

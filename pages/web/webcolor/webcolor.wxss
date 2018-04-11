@@ -1,0 +1,26 @@
+/* pages/web/webcolor/webcolor.wxss */
+.post {    
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px 20px 10px 20px;
+    border: 1px solid rgba(39, 48, 57, 0.08);
+    box-shadow: 10px 10px 5px rgba(39, 48, 57, 0.05);
+}
+
+.post p {
+    font-size: small;
+    margin-bottom: 5px;
+}
+
+.box
+{
+    display: flex;
+    align-items: center;    
+    margin-bottom: 10px;
+}
+
+.cell
+{
+    flex-grow: 1;
+    text-align: center;
+}

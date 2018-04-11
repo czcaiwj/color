@@ -1,0 +1,32 @@
+page {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.box {
+  margin: 10px 10px 10px 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 10px 10px 5px rgba(39, 48, 57, 0.05);
+}
+
+.post {
+  background: #fff;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 30px;
+  border: 1px solid rgba(39, 48, 57, 0.08);
+  box-shadow: 10px 10px 5px rgba(39, 48, 57, 0.05);
+}
+
+.transition-box {
+  margin: 10px 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 10px 10px 5px rgba(39, 48, 57, 0.05);
+}

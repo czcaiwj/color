@@ -1,0 +1,62 @@
+/* pages/plaza/detail.wxss */
+
+
+.layer {
+    background-color: #242424;
+}
+
+.title {
+    text-align: center;
+    color: #ccc;
+    margin: 20px;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+}
+
+.color-block
+{
+    width: 65px;
+    height: 65px;
+}
+
+.value {
+    color: #ccc;
+    width:60px;
+    margin-left:20px;
+}
+
+.fav {
+    padding: 10px;
+    background-color: #ee827c;
+    color: white;
+    text-align: center;
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+.delete {
+    padding: 10px;
+    background-color: #ec6d71;
+    color: white;
+    text-align: center;
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:50%;
+}
+
+.edit {
+    padding: 10px;
+    background-color: #2ca9e1;
+    color: white;
+    text-align: center;
+    position:fixed;
+    bottom:0;
+    left:50%;
+    right:0;
+}

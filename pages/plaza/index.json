@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "配色广场",
+    "navigationBarBackgroundColor": "#cca4e3",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": false,
+    "disableScroll": true
+}

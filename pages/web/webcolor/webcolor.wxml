@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-24">
+            <article class="post">
+                <p style="text-indent:2em;">Web标准的网络安全色一共有216种，是当计算机运行 256 色调色板时能够正确地显示颜色。</p>
+                <p style="text-indent:2em;">256色里有40种颜色在Mac和Windows显示效果不同，所以安全色只有216色。</p>
+            </article>
+        </div>
+    </div>
+    <div class="color">
+        <block wx:for="{{index_array}}" wx:for-item="item" wx:key="">
+            <div class="box">
+                <div class="cell" bindtap="click" data-color="{{color_array[item]}}">
+                    <div style="background-color: {{color_array[item]}}; height: 40px;"></div>
+                    <p class="text-muted">{{color_array[item]}}</p>
+                </div>
+                <div class="cell" bindtap="click" data-color="{{color_array[item + 1]}}">
+                    <div style="background-color: {{color_array[item + 1]}}; height: 40px;"></div>
+                    <p class="text-muted">{{color_array[item + 1]}}</p>
+                </div>
+                <div class="cell" bindtap="click" data-color="{{color_array[item + 2]}}">
+                    <div style="background-color: {{color_array[item + 2]}}; height: 40px;"></div>
+                    <p class="text-muted">{{color_array[item + 2]}}</p>
+                </div>
+            </div>
+        </block>
+    </div>
+    <div class="addfooter"></div>
+</div>

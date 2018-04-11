@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="layer"></div>
+    <div class="colorgroup">
+        <div class="color-item">
+            <div style="height:60px; background-color:{{color1}};"></div>
+            <p>{{color1}}</p>
+        </div>
+        <div class="color-item">
+            <div style="height:60px; background-color:{{color2}};"></div>
+            <p>{{color2}}</p>
+        </div>
+        <div class="color-item">
+            <div style="height:60px; background-color:{{color3}};"></div>
+            <p>{{color3}}</p>
+        </div>
+        <div class="color-item">
+            <div style="height:60px; background-color:{{color4}};"></div>
+            <p>{{color4}}</p>
+        </div>
+        <div class="color-item">
+            <div style="height:60px; background-color:{{color5}};"></div>
+            <p>{{color5}}</p>
+        </div>
+    </div>
+    <div class="box">
+        <p class="text-right" style="color:white;">命名：</p>
+        <input value="{{name}}" type="text" placeholder="请输入配色名称" maxlength="20" confirm-type="done" class="name" bindinput="input" />
+    </div>
+    <div class="info">
+        <p>1、配色名称仅支持中文、英文和数字。</p>
+        <p>2、配色名称限定20个字符以内。</p>
+        <p>3、相同名称的配色方案会被覆盖。</p>
+    </div>
+    <p class="save" bindtap="save">保存</p>    
+</div>

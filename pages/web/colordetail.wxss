@@ -1,0 +1,17 @@
+/* pages/common/colordetail.wxss */
+.preview
+{
+    margin-top: 20px;    
+    margin-bottom: 10px;
+}
+
+.value
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.value p
+{
+    margin-bottom: 10px;
+}

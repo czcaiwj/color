@@ -1,0 +1,8 @@
+<div class="container-fluid">
+    <div class="box" style="height: {{height}}px;">
+        <div class="cell china" bindtap="jump" data-id="china">中国传统色彩</div>
+        <div class="cell japan" bindtap="jump" data-id="japan">日本传统色彩</div>        
+        <div class="cell adobe" bindtap="jump" data-id="adobe">Adobe 配色方案</div>        
+        <div class="cell fav" bindtap="jump" data-id="fav">我的收藏</div>
+    </div>
+</div>

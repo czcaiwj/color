@@ -1,0 +1,183 @@
+<div class="container-fluid">
+    <div class="mode">
+        <div class="header">
+            <p class="text-muted">模式选择</p>
+            <picker bindchange="pickerChange" value="{{index}}" range="{{mode}}">
+                <p class="picker text-muted">
+                    {{mode[index]}}
+                    <span class="iconfont icon-unfold"></span>
+                </p>
+            </picker>
+        </div>
+        <block wx:if="{{index == 0}}">
+            <div class="item">
+                <p>R:</p>
+                <slider id="red" min="0" max="255" value="{{red}}" show-value selected-color="#F00" bindchange="rgbChange" />
+            </div>
+            <div class="item">
+                <p>G:</p>
+                <slider id="green" min="0" max="255" value="{{green}}" show-value selected-color="#0F0" bindchange="rgbChange" />
+            </div>
+            <div class="item">
+                <p>B:</p>
+                <slider id="blue" min="0" max="255" value="{{blue}}" show-value selected-color="#00F" bindchange="rgbChange" />
+            </div>
+        </block>
+        <block wx:elif="{{index == 1}}">
+            <div class="item">
+                <p>C:</p>
+                <slider id="cyan" min="0" max="100" value="{{cyan}}" show-value selected-color="#0FF" bindchange="cmykChange" />%
+            </div>
+            <div class="item">
+                <p>M:</p>
+                <slider id="magenta" min="0" max="100" value="{{magenta}}" show-value selected-color="#F0F" bindchange="cmykChange" />%
+            </div>
+            <div class="item">
+                <p>Y:</p>
+                <slider id="yellow" min="0" max="100" value="{{yellow}}" show-value selected-color="#FF0" bindchange="cmykChange" />%
+            </div>
+            <div class="item">
+                <p>K:</p>
+                <slider id="black" min="0" max="100" value="{{black}}" show-value selected-color="#000" bindchange="cmykChange" />%
+            </div>
+        </block>
+        <block wx:elif="{{index == 2}}">
+            <div class="item">
+                <p>L:</p>
+                <slider id="luminosity" min="0" max="100" value="{{luminosity}}" show-value selected-color="#F00" bindchange="labChange" />
+            </div>
+            <div class="item">
+                <p>a:</p>
+                <slider id="a" min="-128" max="127" value="{{a}}" show-value selected-color="#0F0" bindchange="labChange" />
+            </div>
+            <div class="item">
+                <p>b:</p>
+                <slider id="b" min="-128" max="127" value="{{b}}" show-value selected-color="#2176d9" bindchange="labChange" />
+            </div>
+        </block>
+        <block wx:elif="{{index == 3}}">
+            <div class="item">
+                <p>H:</p>
+                <slider id="hue" min="0" max="359" value="{{hue}}" show-value selected-color="#F00" bindchange="hsbChange" />%
+            </div>
+            <div class="item">
+                <p>S:</p>
+                <slider id="saturation" min="0" max="100" value="{{saturation}}" show-value selected-color="#0F0" bindchange="hsbChange" />%
+            </div>
+            <div class="item">
+                <p>B:</p>
+                <slider id="brightness" min="0" max="100" value="{{brightness}}" show-value selected-color="#2176d9" bindchange="hsbChange" />%
+            </div>
+        </block>
+    </div>
+    <div class="preview">
+        <p>预览</p>
+        <div class="color" style="background-color:{{hex}}"></div>
+        <p>{{hex}}</p>
+    </div>
+
+    <div class="box">
+        <div class="row">
+            <div class="col-12">
+                <div class="value">
+                    <p class="text-muted text-center">RGB分量</p>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <p>R:</p>
+                        </div>
+                        <div class="col-8 text-right"><p>{{red}}</p></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <p>G:</p>
+                        </div>
+                        <div class="col-8 text-right"><p>{{green}}</p></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <p>B:</p>
+                        </div>
+                        <div class="col-8 text-right"><p>{{blue}}</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="value">
+                    <p class="text-muted text-center">CMYK分量</p>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <p>C:</p>
+                        </div>
+                        <div class="col-8 text-right"><p>{{cyan}}%</p></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <p>M:</p>
+                        </div>
+                        <div class="col-8 text-right"><p>{{magenta}}%</p></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <p>Y:</p>
+                        </div>
+                        <div class="col-8 text-right"><p>{{yellow}}%</p></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <p>K:</p>
+                        </div>
+                        <div class="col-8 text-right"><p>{{black}}%</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="value">
+                    <p class="text-muted text-center">Lab分量</p>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <p>L:</p>
+                        </div>
+                        <div class="col-8 text-right"><p>{{luminosity}}</p></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <p>a:</p>
+                        </div>
+                        <div class="col-8 text-right"><p>{{a}}</p></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <p>b:</p>
+                        </div>
+                        <div class="col-8 text-right"><p>{{b}}</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="value">
+                    <p class="text-muted text-center">HSB分量</p>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <p>H:</p>
+                        </div>
+                        <div class="col-8 text-right"><p>{{hue}}%</p></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <p>S:</p>
+                        </div>
+                        <div class="col-8 text-right"><p>{{saturation}}%</p></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <p>B:</p>
+                        </div>
+                        <div class="col-8 text-right"><p>{{brightness}}%</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

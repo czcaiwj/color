@@ -1,0 +1,47 @@
+<div class="container-fluid">
+    <div class="layer"></div>
+    <div class="colorgroup">
+        <block wx:for="{{render_color}}" wx:for-item="item" wx:key="">
+            <div class="color-item">
+                <div style="height:60px; background-color:{{item.hex}};" bindtap="detail" data-color="{{item.hex}}"></div>
+                <p>{{item.hex}}</p>
+            </div>
+        </block>
+    </div>
+
+    <div class="box">
+        <picker bindchange="pickerChange" value="{{index}}" range="{{array}}">
+            <div class="picker text-center text-muted">
+                <small>{{array[index]}}<span class="iconfont icon-unfold"></span></small>
+            </div>
+        </picker>
+        <div class="item">
+            <p>R:</p>
+            <slider id="red" min="0" max="255" value="{{red}}" show-value selected-color="#F00" bindchange="rgbChange" />
+        </div>
+        <div class="item">
+            <p>G:</p>
+            <slider id="green" min="0" max="255" value="{{green}}" show-value selected-color="#0F0" bindchange="rgbChange" />
+        </div>
+        <div class="item">
+            <p>B:</p>
+            <slider id="blue" min="0" max="255" value="{{blue}}" show-value selected-color="#00F" bindchange="rgbChange" />
+        </div>
+        <div class="item">
+            <p>饱和度</p>
+            <slider id="saturation" min="0" max="100" value="{{saturation}}" show-value selected-color="#59b057" bindchange="saturationChange" />
+        </div>
+        <div class="item">
+            <p>亮度</p>
+            <slider id="brightness" min="0" max="100" value="{{brightness}}" show-value selected-color="{{hex}}" bindchange="brightnessChange" />
+        </div>
+    </div>
+    <div class="row" style="margin-top:30px;">
+        <div class="col-9 col-offset-2">
+            <button class="btn btn-block btn-fav" bindtap="fav">收藏</button>
+        </div>
+        <div class="col-9 col-offset-2">
+            <button class="btn btn-block btn-random" bindtap="random_value">随机</button>
+        </div>
+    </div>
+</div>

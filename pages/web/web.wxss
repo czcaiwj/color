@@ -1,0 +1,36 @@
+/* pages/web/web.wxss */
+.box
+{
+    display: flex;
+    flex-direction: column;    
+}
+
+.cell
+{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.css
+{
+    background-color: #3498DB;
+}
+
+.web
+{
+    background-color: #E74C3C;
+}
+
+.gray
+{
+    background-color: #ECF0F1;
+    color: black;
+}
+
+.cell p
+{
+    font-size: 2rem;
+}

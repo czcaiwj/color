@@ -1,0 +1,44 @@
+<!--pages/csscolor/csscolor.wxml-->
+<div class="container-fluid">
+    <div class="col-20 col-offset-2">
+        <article class="post">
+            <p style="text-indent:2em;">HTML 和 CSS 颜色规范中定义了 147 中颜色名（17 种标准颜色加 130 种其他颜色）。下面的表格中列出了所有这些颜色，以及它们的十六进制值。</p>
+            <p style="text-indent:2em;">点击来查看相应颜色的详细分量值。</p>
+        </article>
+    </div>
+    <div class="col-20 col-offset-2">        
+        <table class="table" style="font-size:small;">
+            <caption>CSS 标准色</caption>
+            <tr>
+                <td class="text-center">颜色名</td>
+                <td class="text-center">HEX值</td>
+                <td class="text-center">预览</td>
+            </tr>
+            <block wx:for="{{standard}}" wx:for-item="item" wx:key="">
+                <tr bindtap="jump" data-name="{{item.name}}" data-hex="{{item.hex}}">
+                    <td class="text-center">{{item.name}}</td>
+                    <td class="text-center">{{item.hex}}</td>
+                    <td class="text-center" style="background-color: {{item.hex}};"></td>
+                </tr>
+            </block>
+        </table>
+    </div>
+    <div class="col-20 col-offset-2">
+        
+        <table class="table" style="font-size:small;">
+            <caption>CSS 颜色</caption>
+            <tr>
+                <td class="text-center">颜色名</td>
+                <td class="text-center">HEX值</td>
+                <td class="text-center">预览</td>
+            </tr>
+            <block wx:for="{{color}}" wx:for-item="item" wx:key="">
+                <tr bindtap="jump" data-name="{{item.name}}" data-hex="{{item.hex}}">
+                    <td class="text-center">{{item.name}}</td>
+                    <td class="text-center">{{item.hex}}</td>
+                    <td class="text-center" style="background-color: {{item.hex}};"></td>
+                </tr>
+            </block>
+        </table>
+    </div>
+</div>
