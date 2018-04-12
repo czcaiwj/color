@@ -225,6 +225,21 @@ Page({
         }
     },
 
+    copyAll: function () {      
+        let content = '配色方案：';  
+        for (let i = 0; i < this.data.render_color.length; i++) {
+            content += this.data.render_color[i].hex + ', '
+        };
+        wx.setClipboardData({
+            data: content.substring(0, content.lastIndexOf(',')),
+            success: function (res) {
+                wx.showToast({
+                    title: '复制配色方案成功',
+                });
+            }
+        });
+    },
+
     onShareAppMessage: function (res) {
         return onShare("Color颜值，优秀的配色助手");
     }

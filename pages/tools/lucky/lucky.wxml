@@ -35,13 +35,10 @@
             <p>亮度</p>
             <slider id="brightness" min="0" max="100" value="{{brightness}}" show-value selected-color="{{hex}}" bindchange="brightnessChange" />
         </div>
-    </div>
-    <div class="row" style="margin-top:30px;">
-        <div class="col-9 col-offset-2">
-            <button class="btn btn-block btn-fav" bindtap="fav">收藏</button>
-        </div>
-        <div class="col-9 col-offset-2">
-            <button class="btn btn-block btn-random" bindtap="random_value">随机</button>
-        </div>
+    </div>    
+    <div class="flex-row" style="margin-top:30px;">
+        <button class="btn btn-fav" bindtap="fav">收藏</button>
+        <button class="btn btn-random" bindtap="random_value">随机</button>
+        <button class="btn btn-copy" bindtap="copyAll">复制</button>
     </div>
 </div>
