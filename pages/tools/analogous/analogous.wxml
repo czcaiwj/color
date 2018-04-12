@@ -20,8 +20,8 @@
     </div>
     <div class="preview">
         <p>基准色</p>
-        <div class="color" style="background-color:{{hex}}"></div>
-        <p>{{hex}}</p>
+        <div class="color" style="background-color:{{hex}}" bindtap="copy" data-color="{{hex}}"></div>
+        <p bindtap="copy" data-color="{{hex}}">{{hex}}</p>
     </div>
     <div class="test">
         <p class="text-muted text-center" style="padding: 5px;">
@@ -30,7 +30,7 @@
         <radio-group bindchange="radioChange" class="fixed">
             <block wx:for="{{render_color}}" wx:for-item="item" wx:key="" wx:for-index="i">
                 <div class="cell">
-                    <div class="cell-color" style="background-color:{{item.hex}};"></div>
+                    <div class="cell-color" style="background-color:{{item.hex}};" bindtap="copy" data-color="{{item.hex}}"></div>
                     <div class="cell-footer" wx:if="{{i == 0}}">
                         <radio checked="{{true}}" value="{{i}}" color="{{item.hex}}" />{{item.hex}}                        
                     </div>
@@ -53,14 +53,11 @@
             <p class="col-4">亮度</p>
             <slider class="col-20" id="brightness" min="0" max="100" value="{{brightness}}" show-value selected-color="{{hex}}" bindchange="brightnessChange" />
         </div>
-    </div>
-    <div class="row">
-        <div class="col-9 col-offset-2">
-            <button class="btn btn-block btn-fav" bindtap="fav">收藏</button>
-        </div>
-        <div class="col-9 col-offset-2">
-            <button class="btn btn-block btn-random" bindtap="random_value_change">随机</button>
-        </div>
+    </div>    
+    <div class="flex-row">
+        <button class="btn btn-fav" bindtap="fav">收藏</button>
+        <button class="btn btn-random" bindtap="random_value_change">随机</button>
+        <button class="btn btn-copy" bindtap="copyAll">复制</button>
     </div>
     <div class="addfooter"></div>
 </div>
