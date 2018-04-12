@@ -1,7 +1,7 @@
 <!--pages/common/colordetail.wxml-->
 <div class="container">
     <div class="preview">
-        <div class="color" style="background-color:{{hex}}; height:110px;"></div>
+        <div class="color" style="background-color:{{hex}}; height:110px;" bindtap="copy"></div>
         <p class="text-muted text-center" style="margin-top:10px;" bindtap="copy"><small>{{hex}}</small></p>
     </div>
     <div class="row">
