@@ -14,7 +14,7 @@
                 <td class="text-center">HEX值</td>
                 <td class="text-center">预览</td>
             </tr>
-            <block wx:for="{{standard}}" wx:for-item="item" wx:key="">
+            <block wx:for="{{standard}}" wx:for-item="item" wx:key="" wx:for-index="index">
                 <tr bindtap="jump" data-name="{{item.name}}" data-hex="{{item.hex}}">
                     <td class="text-center">{{item.name}}</td>
                     <td class="text-center">{{item.hex}}</td>
@@ -23,8 +23,7 @@
             </block>
         </table>
     </div>
-    <div class="col-20 col-offset-2">
-        
+    <div class="col-20 col-offset-2">        
         <table class="table" style="font-size:small;">
             <caption>CSS 颜色</caption>
             <tr>

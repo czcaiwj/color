@@ -6,8 +6,8 @@
     </div>   
     
     <div class="colorgroup">
-        <block wx:for="{{render_color}}" wx:for-item="item" wx:key="">
-            <div class="color-item">
+        <block wx:for="{{render_color}}" wx:for-item="item" wx:key="" wx:for-index="index">
+            <div class="color-item" bindtap="copy" data-index="{{index}}">
                 <div style="height:60px; background-color:{{item.hex}};"></div>
                 <p>{{item.hex}}</p>
             </div>

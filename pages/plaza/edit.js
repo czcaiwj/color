@@ -253,5 +253,17 @@ Page({
                 }
             });
         }
-    }
+    },
+
+    copy: function (event) {
+        const index = event.currentTarget.dataset.index;        
+        wx.setClipboardData({
+            data: this.data.render_color[index].hex,
+            success: function (res) {
+                wx.showToast({
+                    title: '复制HEX值成功',
+                });
+            }
+        })
+    },
 })

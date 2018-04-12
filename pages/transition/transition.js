@@ -248,6 +248,17 @@ Page({
         }        
     },
 
+    copy: function () {        
+        wx.setClipboardData({
+            data: this.data.hex,
+            success: function (res) {
+                wx.showToast({
+                    title: '复制HEX值成功',
+                });
+            }
+        });
+    },
+
     onShareAppMessage: function (res) {
         return onShare("颜色转换工具");
     }

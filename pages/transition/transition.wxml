@@ -79,7 +79,7 @@
     <div class="preview">
         <p>预览</p>
         <div class="color" style="background-color:{{hex}}"></div>
-        <p>{{hex}}</p>
+        <p bindtap="copy">{{hex}}</p>
     </div>
 
     <div class="box">

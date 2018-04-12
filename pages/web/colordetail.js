@@ -55,6 +55,17 @@ Page({
         });
     },
 
+    copy: function () {
+        wx.setClipboardData({
+            data: this.data.name + ', HEX: ' + this.data.hex,
+            success: function (res) {
+                wx.showToast({
+                    title: '复制HEX值成功',
+                });
+            }
+        })
+    },
+
     onShareAppMessage: function () {
         return onShare(this.data.name + '的各颜色分量');
     }

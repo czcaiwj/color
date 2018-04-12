@@ -179,6 +179,30 @@ Page({
         }
     },
 
+    copy: function (event) {
+        const index = event.currentTarget.dataset.index;
+        const source = event.currentTarget.dataset.source;
+        if (source == 'standard') {
+            wx.setClipboardData({
+                data: this.data.standard[index].name + ", HEX: " + this.data.standard[index].hex,
+                success: function (res) {
+                    wx.showToast({
+                        title: '复制HEX值成功',
+                    });
+                }
+            });
+        } else {
+            wx.setClipboardData({
+                data: this.data.color[index].name + ", HEX: " + this.data.color[index].hex,
+                success: function (res) {
+                    wx.showToast({
+                        title: '复制HEX值成功',
+                    });
+                }
+            });
+        }    
+    },
+
     onShareAppMessage: function (res) {
         return onShare("CSS颜色参考");
     }
