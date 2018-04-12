@@ -69,3 +69,12 @@
     margin-bottom: 10px;
     font-size: small;
 }
+
+
+.hexinput {
+    display:block;
+    width:100%;
+    font-size:small;
+    /*border-bottom:1px solid #1e8cd4;*/
+    padding-left: 10px;
+}

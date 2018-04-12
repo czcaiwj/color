@@ -69,6 +69,12 @@
                 <slider id="brightness" min="0" max="100" value="{{brightness}}" show-value selected-color="#2176d9" bindchange="hsbChange" />%
             </div>
         </block>
+        <block wx:elif="{{index == 4}}">
+            <div class="item" style="margin-top:20px;">
+                <p style="margin-left: 120px;">#</p>
+                <input class="hexinput" value='{{hex2}}' placeholder="请输入HEX颜色值" maxlength="6" bindinput="hexInput" confirm-type="done" />                
+            </div>            
+        </block>
     </div>
     <div class="preview">
         <p>预览</p>

@@ -1,6 +1,7 @@
 // 颜色转换
 const { 
     check_rgb_value,   // 检查RGB某一分量值是否合法
+    hex2rgb,           // 十六进制值转RGB
     rgb2hex,           // RGB值转十六进制表示
     rgb2hsb,           // RGB值转HSB值
     rgb2cmyk,          // RGB值转CMYK值
@@ -18,9 +19,10 @@ Page({
      * 页面的初始数据
      */
     data: {
-        mode: ['RGB', 'CMYK', 'LAB', 'HSB'],
+        mode: ['RGB', 'CMYK', 'LAB', 'HSB', 'HEX'],
         index: 0,        
         hex: "#000000",
+        hex2: "000000",
 
         red: 0, green: 0, blue: 0,                   // RGB分量
         cyan: 0, magenta: 0, yellow: 0, black: 0,    // CMYK分量
@@ -34,7 +36,10 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {        
-        this.setData({ hex: "#000000" });
+        this.setData({ 
+            hex: "#000000",
+            hex2: "000000"
+        });
         let r = options.red;
         let g = options.green;
         let b = options.blue;
@@ -65,6 +70,7 @@ Page({
             green: green,
             blue: blue,
             hex: hex,
+            hex2: hex.slice(1),
             hue: hsb[0],
             saturation: hsb[1],
             brightness: hsb[2],
@@ -136,6 +142,7 @@ Page({
             green: rgb[1],
             blue: rgb[2],
             hex: hex,
+            hex2: hex.slice(0),
             hue: hsb[0],
             saturation: hsb[1],
             brightness: hsb[2],
@@ -173,6 +180,7 @@ Page({
             green: rgb[1],
             blue: rgb[2],
             hex: hex,
+            hex2: hex.slice(0),
             cyan: cmyk[0],
             magenta: cmyk[1],
             yellow: cmyk[2],
@@ -205,6 +213,39 @@ Page({
                 break;
         }
         this.valueChange(rgb[0], rgb[1], rgb[2]);
+    },
+
+    /**
+     * 输入HEX值
+     */
+    hexInput: function (event) {        
+        const value = event.detail.value;
+        const pattern = /^[\dabcdef]{6}$/;
+        if (pattern.test(value)) {
+            const hex = '#' + value;
+            const hex2 = value;
+            const rgb = hex2rgb(hex);            
+            const hsb = rgb2hsb(rgb[0], rgb[1], rgb[2]);
+            const cmyk = rgb2cmyk(rgb[0], rgb[1], rgb[2]);
+            const lab = rgb2lab(rgb[0], rgb[1], rgb[2]);
+            this.setData({
+                red: rgb[0],
+                green: rgb[1],
+                blue: rgb[2],
+                hex: hex,
+                hex2: hex2,
+                cyan: cmyk[0],
+                magenta: cmyk[1],
+                yellow: cmyk[2],
+                black: cmyk[3],
+                hue: hsb[0],
+                saturation: hsb[1],
+                brightness: hsb[2],
+                luminosity: lab[0],
+                a: lab[1],
+                b: lab[2]
+            });
+        }        
     },
 
     onShareAppMessage: function (res) {
