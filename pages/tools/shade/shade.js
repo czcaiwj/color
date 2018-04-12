@@ -137,6 +137,33 @@ Page({
         }
     },
 
+    copy: function (event) {
+        const hex = event.currentTarget.dataset.color;
+        wx.setClipboardData({
+            data: hex,
+            success: function (res) {
+                wx.showToast({
+                    title: '复制HEX值成功',
+                });
+            }
+        });
+    },
+
+    copyAll: function () {
+        let content = '基准色：' + this.data.hex + ', 渐变色：';
+        for (let i = 0; i < this.data.render_color.length; i++) {
+            content += this.data.render_color[i].hex + ', '
+        };
+        wx.setClipboardData({
+            data: content.substring(0, content.lastIndexOf(',')),
+            success: function (res) {
+                wx.showToast({
+                    title: '复制配色方案成功',
+                });
+            }
+        });
+    },
+
     onShareAppMessage: function (res) {
         return onShare("渐变配色方案");
     }

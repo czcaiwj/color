@@ -26,9 +26,9 @@
         </div>
     </div>
     <div class="preview">
-        <p>基准色</p>
-        <div class="color" style="background-color:{{hex}}"></div>
-        <p>{{hex}}</p>
+        <p>基准色</p>  
+        <div class="color" style="background-color:{{hex}}" bindtap="copy" data-color="{{hex}}"></div>
+        <p bindtap="copy" data-color="{{hex}}">{{hex}}</p>
     </div>
     <div class="test">
         <p class="text-muted text-center" style="padding: 5px;">
@@ -45,14 +45,11 @@
                 </div>
             </block>
         </div>
-    </div>
-    <div class="row" style="margin-top:20px;">
-        <div class="col-9 col-offset-2">
-            <button class="btn btn-block btn-fav" bindtap="fav">收藏</button>
-        </div>
-        <div class="col-9 col-offset-2">
-            <button class="btn btn-block btn-random" bindtap="random_value_change">随机</button>
-        </div>
+    </div>    
+    <div class="flex-row">
+        <button class="btn btn-fav" bindtap="fav">收藏</button>
+        <button class="btn btn-random" bindtap="random_value_change">随机</button>
+        <button class="btn btn-copy" bindtap="copyAll">复制</button>
     </div>
     <div class="addfooter"></div>
 </div>
