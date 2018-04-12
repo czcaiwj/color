@@ -113,6 +113,7 @@ radio
 
 .btn-fav
 {
+    flex-grow: 1;
     color:#fff;
     background-color:#e864b3;
     border-color:#5e96d1;
@@ -121,8 +122,17 @@ radio
 
 .btn-random
 {
+    flex-grow: 1;
     color:#fff;
     background-color:#5e96d1;
     border-color:#5e96d1;
+    border-radius: 20px;
+}
+
+.btn-copy {
+    flex-grow: 1;
+    color:#fff;
+    background-color:#09bb07;
+    border-color:#09bb07;
     border-radius: 20px;
 }
