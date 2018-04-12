@@ -28,11 +28,12 @@
     margin-left:20px;
 }
 
-.fav {
-    padding: 10px;
-    background-color: #ee827c;
-    color: white;
-    text-align: center;
+.fixed-bottom {
+    display:flex;    
+    flex-direction:row;
+    flex-wrap:nowrap;
+    align-items:center;
+    justify-content:center;
     position:fixed;
     bottom:0;
     left:0;
@@ -40,23 +41,33 @@
 }
 
 .delete {
+    flex-grow: 1;
     padding: 10px;
     background-color: #ec6d71;
     color: white;
-    text-align: center;
-    position:fixed;
-    bottom:0;
-    left:0;
-    right:50%;
+    text-align: center;    
 }
 
 .edit {
+    flex-grow: 1;
     padding: 10px;
     background-color: #2ca9e1;
     color: white;
-    text-align: center;
-    position:fixed;
-    bottom:0;
-    left:50%;
-    right:0;
+    text-align: center;    
+}
+
+.fav {
+    flex-grow: 1;
+    padding: 10px;
+    background-color: #ee827c;
+    color: white;
+    text-align: center;    
+}
+
+.copy {
+    flex-grow: 1;
+    padding: 10px;
+    background-color: #09bb07;
+    color: white;
+    text-align: center;    
 }

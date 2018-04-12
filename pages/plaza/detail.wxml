@@ -19,10 +19,16 @@
         </div>
     </block>
     <block wx:if="{{source == 'other'}}">
-        <p class="fav" bindtap="fav">收藏</p>
+        <div class="fixed-bottom">
+            <p class="fav" bindtap="fav">收藏</p>
+            <p class="copy" bindtap="copy">复制</p>
+        </div>
     </block>
     <block wx:if="{{source == 'my'}}">
-        <p class="delete" bindtap="delete">删除</p>
-        <p class="edit" bindtap="edit">编辑</p>
+        <div class="fixed-bottom">            
+            <p class="copy" bindtap="copy">复制</p>            
+            <p class="edit" bindtap="edit">编辑</p>
+            <p class="delete" bindtap="drop">删除</p>
+        </div>        
     </block>
 </div>

@@ -84,7 +84,23 @@ Page({
         }
     },
 
-    delete: function () {
+    copy: function () {
+        let content = "";
+        for (let i = 0; i < this.data.colors.length; i++) {
+            content += this.data.colors[i].hex + ', ';
+        }
+        content = content.substring(0, content.lastIndexOf(','));
+        wx.setClipboardData({
+            data: content,
+            success: function (res) {
+                wx.showToast({
+                    title: '复制配色方案成功',
+                });
+            }
+        });
+    },
+
+    drop: function () {
         if (!this.data.buttonClicked) {
             preventDoubleClick(this);
             const that = this;
