@@ -78,7 +78,7 @@
     </div>
     <div class="preview">
         <p>预览</p>
-        <div class="color" style="background-color:{{hex}}"></div>
+        <div class="color" style="background-color:{{hex}}" bindtap="copy"></div>
         <p bindtap="copy">{{hex}}</p>
     </div>
 
