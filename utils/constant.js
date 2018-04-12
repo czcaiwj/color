@@ -10,6 +10,7 @@ const SAVE_USER_COLORS = ROOT_DOMAIN + 'User/saveColor';       // 保存用户�
 const GET_USER_COLORS = ROOT_DOMAIN + 'User/getColor';         // 获取用户配色方案
 const DELETE_USER_COLORS = ROOT_DOMAIN + 'User/deleteColor';   // 删除用户配色方案
 const UPDATE_USER_COLORS = ROOT_DOMAIN + 'User/updateColor';   // 更新用户配色方案
+const ABOUT_CONTENT = ROOT_DOMAIN + 'Config/about';            // 获取关于信息
 
 module.exports = {
     USER_LOGIN,         // 用户登录
@@ -18,4 +19,5 @@ module.exports = {
     GET_USER_COLORS,    // 获取用户配色方案
     DELETE_USER_COLORS, // 删除用户配色方案
     UPDATE_USER_COLORS, // 更新用户配色方案
+    ABOUT_CONTENT,      // 获取关于信息
 };
