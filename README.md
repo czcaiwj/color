@@ -39,6 +39,7 @@ Color颜值是一个基于色轮配色原理的小程序。通过这一小程序
 ![Adobe配色方案](http://imcoding.org/Public/resource/img/color/color5-xs.jpg)
 ![Web颜色](http://imcoding.org/Public/resource/img/color/color6-xs.jpg)
 ![色彩工具](http://imcoding.org/Public/resource/img/color/color7-xs.jpg)
+![互补色配色](http://imcoding.org/Public/resource/img/color/color8-xs.jpg)
 ![颜色转换](http://imcoding.org/Public/resource/img/color/color9-xs.jpg)
 
 谢谢！
