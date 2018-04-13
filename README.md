@@ -32,15 +32,15 @@ Color颜值是一个基于色轮配色原理的小程序。通过这一小程序
 小程序截图
 
 
-![Color颜值](http://imcoding.org/Public/resource/img/color/color1.png)
-![配色广场](http://imcoding.org/Public/resource/img/color/color2.png)
-![中国传统色彩](http://imcoding.org/Public/resource/img/color/color3.png)
-![日本传统色彩](http://imcoding.org/Public/resource/img/color/color4.png)
-![Adobe配色方案](http://imcoding.org/Public/resource/img/color/color5.png)
-![Web颜色](http://imcoding.org/Public/resource/img/color/color6.png)
-![色彩工具](http://imcoding.org/Public/resource/img/color/color7.png)
-![颜色转换](http://imcoding.org/Public/resource/img/color/color9.png)
+![Color颜值](http://imcoding.org/Public/resource/img/color/color1-xs.jpg)
+![配色广场](http://imcoding.org/Public/resource/img/color/color2-xs.jpg)
+![中国传统色彩](http://imcoding.org/Public/resource/img/color/color3-xs.jpg)
+![日本传统色彩](http://imcoding.org/Public/resource/img/color/color4-xs.jpg)
+![Adobe配色方案](http://imcoding.org/Public/resource/img/color/color5-xs.jpg)
+![Web颜色](http://imcoding.org/Public/resource/img/color/color6-xs.jpg)
+![色彩工具](http://imcoding.org/Public/resource/img/color/color7-xs.jpg)
+![颜色转换](http://imcoding.org/Public/resource/img/color/color9-xs.jpg)
 
 谢谢！
 
-<img src="https://imcoding.org/Public/resource/img/zan_code.jpg" style="width:200px; height:200px;" />
+<img src="https://imcoding.org/Public/resource/img/zan_code-xs.jpg" />
