@@ -12,61 +12,74 @@
         <block wx:if="{{index == 0}}">
             <div class="item">
                 <p>R:</p>
-                <slider id="red" min="0" max="255" value="{{red}}" show-value selected-color="#F00" bindchange="rgbChange" />
-            </div>
+                <slider id="red" min="0" max="255" value="{{red}}" show-value="{{false}}" selected-color="#F00" bindchange="rgbChange" />
+                <input class="in-value" type="number" maxlength='3' bindinput='inputRGB' value="{{red}}" data-id="RED"></input>
+            </div>            
             <div class="item">
                 <p>G:</p>
-                <slider id="green" min="0" max="255" value="{{green}}" show-value selected-color="#0F0" bindchange="rgbChange" />
+                <slider id="green" min="0" max="255" value="{{green}}" show-value="{{false}}" selected-color="#0F0" bindchange="rgbChange" />
+                <input class="in-value" type="number" maxlength='3' bindinput='inputRGB' value="{{green}}" data-id="GREEN"></input>
             </div>
             <div class="item">
                 <p>B:</p>
-                <slider id="blue" min="0" max="255" value="{{blue}}" show-value selected-color="#00F" bindchange="rgbChange" />
+                <slider id="blue" min="0" max="255" value="{{blue}}" show-value="{{false}}" selected-color="#00F" bindchange="rgbChange" />
+                <input class="in-value" type="number" maxlength='3' bindinput='inputRGB' value="{{blue}}" data-id="BLUE"></input>
             </div>
         </block>
         <block wx:elif="{{index == 1}}">
             <div class="item">
                 <p>C:</p>
-                <slider id="cyan" min="0" max="100" value="{{cyan}}" show-value selected-color="#0FF" bindchange="cmykChange" />%
+                <slider id="cyan" min="0" max="100" value="{{cyan}}" show-value="{{false}}" selected-color="#0FF" bindchange="cmykChange" />
+                <input class="in-value" type="number" maxlength='3' bindinput='inputCMYK' value="{{cyan}}" data-id="CYAN"></input>%
             </div>
             <div class="item">
                 <p>M:</p>
-                <slider id="magenta" min="0" max="100" value="{{magenta}}" show-value selected-color="#F0F" bindchange="cmykChange" />%
+                <slider id="magenta" min="0" max="100" value="{{magenta}}" show-value="{{false}}" selected-color="#F0F" bindchange="cmykChange" />
+                <input class="in-value" type="number" maxlength='3' bindinput='inputCMYK' value="{{magenta}}" data-id="MAGENTA"></input>%
             </div>
             <div class="item">
                 <p>Y:</p>
-                <slider id="yellow" min="0" max="100" value="{{yellow}}" show-value selected-color="#FF0" bindchange="cmykChange" />%
+                <slider id="yellow" min="0" max="100" value="{{yellow}}" show-value="{{false}}" selected-color="#FF0" bindchange="cmykChange" />
+                <input class="in-value" type="number" maxlength='3' bindinput='inputCMYK' value="{{yellow}}" data-id="YELLOW"></input>%
             </div>
             <div class="item">
                 <p>K:</p>
-                <slider id="black" min="0" max="100" value="{{black}}" show-value selected-color="#000" bindchange="cmykChange" />%
+                <slider id="black" min="0" max="100" value="{{black}}" show-value="{{false}}" selected-color="#000" bindchange="cmykChange" />
+                <input class="in-value" type="number" maxlength='3' bindinput='inputCMYK' value="{{black}}" data-id="BLACK"></input>%
             </div>
         </block>
         <block wx:elif="{{index == 2}}">
             <div class="item">
                 <p>L:</p>
-                <slider id="luminosity" min="0" max="100" value="{{luminosity}}" show-value selected-color="#F00" bindchange="labChange" />
+                <slider id="luminosity" min="0" max="100" value="{{luminosity}}" show-value="{{false}}" selected-color="#F00" bindchange="labChange" />
+                <input class="in-value" type="number" maxlength='3' bindinput='inputLAB' value="{{luminosity}}" data-id="LUMINOSITY"></input>
             </div>
             <div class="item">
                 <p>a:</p>
-                <slider id="a" min="-128" max="127" value="{{a}}" show-value selected-color="#0F0" bindchange="labChange" />
+                <slider id="a" min="-128" max="127" value="{{a}}" show-value="{{fasle}}" selected-color="#0F0" bindchange="labChange" />
+                <input class="in-value" type="number" maxlength='4' bindinput='inputLAB' value="{{a}}" data-id="A"></input>
             </div>
             <div class="item">
                 <p>b:</p>
-                <slider id="b" min="-128" max="127" value="{{b}}" show-value selected-color="#2176d9" bindchange="labChange" />
+                <slider id="b" min="-128" max="127" value="{{b}}" show-value="{{fasle}}" selected-color="#2176d9" bindchange="labChange" />
+                <input class="in-value" type="number" maxlength='4' bindinput='inputLAB' value="{{b}}" data-id="B"></input>
             </div>
         </block>
         <block wx:elif="{{index == 3}}">
             <div class="item">
                 <p>H:</p>
-                <slider id="hue" min="0" max="359" value="{{hue}}" show-value selected-color="#F00" bindchange="hsbChange" />%
+                <slider id="hue" min="0" max="359" value="{{hue}}" show-value="{{false}}" selected-color="#F00" bindchange="hsbChange" />
+                <input class="in-value" type="number" maxlength='3' bindinput='inputHSB' value="{{hue}}" data-id="HUE"></input>%
             </div>
             <div class="item">
                 <p>S:</p>
-                <slider id="saturation" min="0" max="100" value="{{saturation}}" show-value selected-color="#0F0" bindchange="hsbChange" />%
+                <slider id="saturation" min="0" max="100" value="{{saturation}}" show-value="{{false}}" selected-color="#0F0" bindchange="hsbChange" />
+                <input class="in-value" type="number" maxlength='3' bindinput='inputHSB' value="{{saturation}}" data-id="SATURATION"></input>%
             </div>
             <div class="item">
                 <p>B:</p>
-                <slider id="brightness" min="0" max="100" value="{{brightness}}" show-value selected-color="#2176d9" bindchange="hsbChange" />%
+                <slider id="brightness" min="0" max="100" value="{{brightness}}" show-value="{{false}}" selected-color="#2176d9" bindchange="hsbChange" />
+                <input class="in-value" type="number" maxlength='3' bindinput='inputHSB' value="{{brightness}}" data-id="BRIGHTNESS"></input>%
             </div>
         </block>
         <block wx:elif="{{index == 4}}">

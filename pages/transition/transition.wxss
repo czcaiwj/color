@@ -31,6 +31,18 @@
 {
     color: #888;
     font-size: small;    
+    flex-shrink: 0;
+}
+
+.item slider {
+    flex-grow: 1;
+}
+
+.item .in-value {
+    width: 40px;
+    flex-shrink: 0;
+    font-size: small;
+    text-align:center;
 }
 
 .preview

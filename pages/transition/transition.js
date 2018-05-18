@@ -248,6 +248,174 @@ Page({
         }        
     },
 
+    inputRGB: function (event) {        
+        const id = event.currentTarget.dataset.id;
+        const value = parseInt(event.detail.value);
+        if (value <= 255 && value >= 0) {
+            switch (id) {
+                case 'RED':
+                    this.valueChange(value, this.data.green, this.data.blue);
+                    break;
+                case 'GREEN':
+                    this.valueChange(this.data.red, value, this.data.blue);
+                    break;
+                case 'BLUE':
+                    this.valueChange(this.data.red, this.data.green, value);
+                    break;
+            }
+            
+        } else {
+            switch (id) {
+                case 'RED':
+                    this.valueChange(0, this.data.green, this.data.blue);
+                    break;
+                case 'GREEN':
+                    this.valueChange(this.data.red, 0, this.data.blue);
+                    break;
+                case 'BLUE':
+                    this.valueChange(this.data.red, this.data.green, 0);
+                    break;
+            }            
+        }
+    },
+
+    inputCMYK: function (event) {
+        const id = event.currentTarget.dataset.id;
+        const value = parseInt(event.detail.value);
+        if (value <= 100 && value >= 0) {
+            switch (id) {
+                case "CYAN":
+                    this.setData({ cyan: value });
+                    break;
+                case "MAGENTA":
+                    this.setData({ magenta: value });
+                    break;
+                case "YELLOW":
+                    this.setData({ yellow: value });
+                    break;
+                case "BLACK":
+                    this.setData({ black: value });
+                    break;
+            }            
+        } else {
+            switch (id) {
+                case "CYAN":
+                    this.setData({ cyan: 0 });
+                    break;
+                case "MAGENTA":
+                    this.setData({ magenta: 0 });
+                    break;
+                case "YELLOW":
+                    this.setData({ yellow: 0 });
+                    break;
+                case "BLACK":
+                    this.setData({ black: 0 });
+                    break;                
+            }
+        }
+
+        // 设置分量值
+        const rgb = cmyk2rgb(this.data.cyan, this.data.magenta, this.data.yellow, this.data.black);
+        const hex = rgb2hex(rgb[0], rgb[1], rgb[2]);
+        const hsb = rgb2hsb(rgb[0], rgb[1], rgb[2]);
+        const lab = rgb2lab(rgb[0], rgb[1], rgb[2]);
+
+        this.setData({
+            red: rgb[0],
+            green: rgb[1],
+            blue: rgb[2],
+            hex: hex,
+            hex2: hex.slice(0),
+            hue: hsb[0],
+            saturation: hsb[1],
+            brightness: hsb[2],
+            luminosity: lab[0],
+            a: lab[1],
+            b: lab[2]
+        });
+    },
+
+    inputLAB: function (event) {
+        const id = event.currentTarget.dataset.id;
+        const value = parseInt(event.detail.value);
+        switch (id) {
+            case 'LUMINOSITY':
+                if (value <= 100 && value >= 0) {
+                    this.setData({ luminosity: value });
+                } else {
+                    this.setData({ luminosity: 0 });
+                }
+                break;
+            case 'A':
+                if (value <= 127 && value >= -128) {
+                    this.setData({ a: value });
+                } else {
+                    this.setData({ a: 0 });
+                }
+                break;
+            case 'B':
+                if (value <= 127 && value >= -128) {
+                    this.setData({ b: value });
+                } else {
+                    this.setData({ b: 0 });
+                }
+                break;
+        }
+        // 设置分量值        
+        const rgb = lab2rgb(this.data.luminosity, this.data.a, this.data.b);
+        const hex = rgb2hex(rgb[0], rgb[1], rgb[2]);
+        const hsb = rgb2hsb(rgb[0], rgb[1], rgb[2]);
+        const cmyk = rgb2cmyk(rgb[0], rgb[1], rgb[2]);
+        const lab = rgb2lab(rgb[0], rgb[1], rgb[2]);
+        this.setData({
+            red: rgb[0],
+            green: rgb[1],
+            blue: rgb[2],
+            hex: hex,
+            hex2: hex.slice(0),
+            cyan: cmyk[0],
+            magenta: cmyk[1],
+            yellow: cmyk[2],
+            black: cmyk[3],
+            hue: hsb[0],
+            saturation: hsb[1],
+            brightness: hsb[2],
+            luminosity: lab[0],
+            a: lab[1],
+            b: lab[2]
+        });        
+    },
+
+    inputHSB: function (event) {
+        const id = event.currentTarget.dataset.id;
+        const value = parseInt(event.detail.value);        
+        var rgb;
+        switch (id) {
+            case 'HUE':
+                if (value <= 359 && value >= 0) {
+                    rgb = hsb2rgb(value, this.data.saturation, this.data.brightness);
+                } else {
+                    rgb = hsb2rgb(0, this.data.saturation, this.data.brightness);
+                }
+                break;
+            case 'SATURATION':
+                if (value <= 100 && value >= 0) {
+                    rgb = hsb2rgb(this.data.hue, value, this.data.brightness);
+                } else {
+                    rgb = hsb2rgb(this.data.hue, 0, this.data.brightness);
+                }
+                break;
+            case 'BRIGHTNESS':
+                if (value <= 100 && value >= 0) {
+                    rgb = hsb2rgb(this.data.hue, this.data.saturation, value);
+                } else {
+                    rgb = hsb2rgb(this.data.hue, this.data.saturation, 0);
+                }
+                break;
+        }        
+        this.valueChange(rgb[0], rgb[1], rgb[2]);
+    },
+
     copy: function () {        
         wx.setClipboardData({
             data: this.data.hex,
