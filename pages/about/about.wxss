@@ -12,3 +12,7 @@
 {
     margin-bottom: 5px;
 }
+
+.bottom-ad {
+    margin-bottom: 20px;
+}

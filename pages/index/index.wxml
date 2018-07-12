@@ -11,10 +11,5 @@
             <p class="btn-item animated fadeInUp" bindtap="click" data-name="about">关于颜值</p>
         </div>
     </div>
-    <!--<button class="btn-timeline">
-        <p class="iconfont icon-pengyouquan" open-type="contact"></p>
-    </button>-->
-    <button class="btn-share" open-type="share">
-        <p class="iconfont icon-web-icon-"></p>
-    </button>
+    <ad unit-id="adunit-5137c4e5ac3a6d17"></ad>
 </div>
