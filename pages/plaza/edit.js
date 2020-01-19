@@ -2,7 +2,7 @@
 
 const colors = require('../../utils/colors.js');
 const { UPDATE_USER_COLORS } = require('../../utils/constant.js');
-const { httpPost } = require('../../utils/functions.js');
+const { httpGet } = require('../../utils/functions.js');
 
 Page({
 
@@ -233,7 +233,7 @@ Page({
                 color5: this.data.render_color[4].hex,
                 name: this.data.name
             };
-            httpPost(UPDATE_USER_COLORS, data).then(data => {
+            httpGet(UPDATE_USER_COLORS, data).then(data => {
                 if (data.code == 0) {                    
                     wx.showToast({
                         title: '更新配色成功',

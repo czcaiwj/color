@@ -1,7 +1,7 @@
 // pages/plaza/fav.js
 
 const { SAVE_USER_COLORS } = require('../../utils/constant.js');
-const { httpPost } = require('../../utils/functions.js');
+const { httpGet } = require('../../utils/functions.js');
 
 Page({
 
@@ -57,7 +57,7 @@ Page({
                 color5: this.data.color5,
                 name: this.data.name
             };
-            httpPost(SAVE_USER_COLORS, data).then(data => {
+            httpGet(SAVE_USER_COLORS, data).then(data => {
                 if (data.code == 0) {
                     const value = data['data'];
                     if (value == 1) {

@@ -5,7 +5,7 @@ const {
     rgb2hsb
 } = require('../../utils/colors.js');
 
-const { preventDoubleClick, onShare, httpPost } = require('../../utils/functions.js');
+const { preventDoubleClick, onShare, httpPost, httpGet } = require('../../utils/functions.js');
 const { DELETE_USER_COLORS } = require('../../utils/constant.js');
 
 Page({
@@ -117,7 +117,7 @@ Page({
                                 openid: wx.getStorageSync('openid'),
                                 id: that.data.id
                             };
-                            httpPost(url, data).then(data => {
+                            httpGet(url, data).then(data => {
                                 if (data.code == 0) {
                                     wx.showToast({
                                         title: '删除成功',

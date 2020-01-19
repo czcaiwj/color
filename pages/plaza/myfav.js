@@ -1,6 +1,6 @@
 // pages/plaza/myfav.js
 
-const { httpPost, preventDoubleClick } = require('../../utils/functions.js');
+const { httpPost, httpGet, preventDoubleClick } = require('../../utils/functions.js');
 const { GET_USER_COLORS } = require('../../utils/constant.js');
 
 Page({
@@ -24,13 +24,11 @@ Page({
     },
 
     onShow: function () {
-        const url = GET_USER_COLORS;
-        const data = {
-            cust_id: wx.getStorageSync('cust_id'),
-            openid: wx.getStorageSync('openid')
-        };
+        const cust_id = wx.getStorageSync('cust_id');
+        const openid = wx.getStorageSync('openid');
+        const url = GET_USER_COLORS + '?cust_id=' + cust_id + '&openid=' + openid;        
         const that = this;
-        httpPost(url, data).then(data => {
+        httpGet(url).then(data => {
             if (data.code == 0) {
                 that.setData({
                     colors: data['data']
